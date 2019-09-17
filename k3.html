@@ -1,0 +1,102 @@
+<html>
+ <head >
+ <font size="5" color="red">
+ <h1 style="padding-top: 40px" align="center">WELCOME FANS OF HARRY POTTER</h1>
+ </font>
+<br><br>
+	<h2 style="color:white;" align="center">Harry And Hogwarts</h2><hr>
+	<title>Muggles Of Hogwarts</title>
+  <head>
+  <body background="x.jpg" align="center">
+	
+		<form name="formk3" onsubmit="return validForm()" method="post">
+			<table align="center" cellspacing="10" name="tb">
+			<tr>
+				<td><font color="white">First Name*</font></td>
+				<td><input type="text" name="fn"></td>
+			</tr>
+			<tr>
+				<td><font color="white">Middle Name</font></td>
+				<td><input type="text" name="mn"></td>
+			</tr>
+
+			<tr>
+				<td><font color="white">Last Name*</font></td>
+				<td><input type="text" name="ln"></td>
+			</tr>
+			<tr>
+				<td><font color="white">Address*</font></td>
+				<td><input type="text" name="ad"></td>
+			</tr>	
+
+			<tr>
+				<td><font color="white">Mobile No*</font></td>
+				<td><input type="number" name="mno"></td>
+			</tr>
+			<tr>
+				<td><font color="white">Favourite Character*</font></td>
+				<td><input type="text" name="fch"></td>
+			</tr>
+			</table>
+			<table align="center" cellspacing="10" name="tb1">
+				<tr>
+					<td><input type="submit" name="sub" value="Submit"><td>
+				</tr>	
+			</table>
+		</form>
+		<script>
+            function validForm() {
+			var x = document.forms["formk3"]["fn"];
+			var y = document.forms["formk3"]["ln"];
+			var z = document.forms["formk3"]["ad"];
+			var mob=document.forms["formk3"]["mno"].value;
+			var ch=document.forms["formk3"]["fch"].value;
+			var q=x.value;
+			var check=q.slice(0,1);
+			var j=typeof mob;
+			var m=mob.toString();
+			if (x.value == "") {
+			window.alert("Please Enter First Name!");
+			x.focus();
+			return false;
+			}
+			if (y.value == "") {
+			window.alert("Please Enter Last Name!");
+			y.focus();
+			return false;
+			}
+			if (z.value == "") {
+			window.alert("Address Cannot Be Empty!");
+			z.focus();
+			return false;
+			}
+			if(j!="string")
+			{
+				window.alert("Invalid Mobile Number!");
+				mob.focus();
+				return false;
+			}
+			if (m.length != 10) {
+			window.alert("Enter 10 Digit Mobile Number!");
+			mob.focus();
+			return false;
+			}
+			if (ch != "harry"&&ch != "ron"&&ch != "hermoine"&&ch != "nevil"&&ch != "fred"&&ch != "george"&&ch != "malfoy"&&ch != "snape"&&ch != "dumbledore"&&ch != "sirius"&&ch != "hagrid") {
+			window.alert("Ye Kab Tha Harry Potter Me?");
+			ch.focus();
+			return false;
+			}
+			if(check=="a"||check=="v"||check=="j"||check=="d"||check=="r"||check=="t"||check=="m"||check=="l")
+			{
+				window.alert("You Are A Pure Blood!");
+			return false;
+			}
+			else
+			{
+			window.alert("You Are A Muggle!");
+			return false;
+			}
+	}
+</script>
+  </body>
+<html>  
